@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws">
+ <xsd:element name="GetCustomerRequest">
+     <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:long"></xsd:element>
+        </xsd:sequence>
+     </xsd:complexType>
+ </xsd:element>
+ <xsd:element name="GetCustomerResponse">
+     <xsd:complexType>
+         <xsd:sequence>
+             <xsd:element name="customer" type="Customer"></xsd:element>
+         </xsd:sequence>
+     </xsd:complexType>
+ </xsd:element>
+    <xsd:complexType name="Customer">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:long"></xsd:element>
+            <xsd:element name="firstName" type="xsd:string"></xsd:element>
+            <xsd:element name="lastName" type="xsd:string"></xsd:element>
+            <xsd:element name="email" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
